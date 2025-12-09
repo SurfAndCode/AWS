@@ -1,5 +1,5 @@
 resource "aws_instance" "example" {
-  ami = "ami-007e5a061b93ceb2f"
+  ami = "ami-007e5a061b93ceb2f" #Amazon Linux AMI free
   instance_type = "t3.micro"
 
 user_data = <<-EOF
