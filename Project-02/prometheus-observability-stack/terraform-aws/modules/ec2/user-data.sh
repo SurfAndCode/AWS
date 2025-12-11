@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Update the package list and upgrade the installed packages
-sudo dnf update -y
+sudo yum update -y
 
 # Add Swap Memory of 2GB
 sudo swapon --show
@@ -21,10 +21,10 @@ cat /proc/sys/vm/vfs_cache_pressure
 sudo sysctl vm.vfs_cache_pressure=50
 
 # Install essential packages
-sudo dnf install -y curl net-tools wget unzip tree make git
+sudo yum install -y --skip-broken curl net-tools wget unzip tree make git
 
 # Install Docker
-sudo dnf install -y docker.io
+sudo yum install -y docker
 
 # Install Docker Compose
 sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
